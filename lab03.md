@@ -43,7 +43,7 @@
 
 #### 引用及参考资料
 * [百度百科词条Aaron Swartz](https://baike.baidu.com/item/%E4%BA%9A%E4%BC%A6%C2%B7%E6%96%AF%E6%B2%83%E8%8C%A8/4027108?fr=aladdin)  
-* [文章“仅因过量下载论文，他被政府指控13项重罪”.SME](https://baike.baidu.com/tashuo/browse/content?id=afa769b9742ec541c9cfd7bc&lemmaId=&fromLemmaModule=pcBottom)  
-* [斯沃茨和自由美国的边界.东方早报](http://finance.ifeng.com/money/roll/20130117/7567842.shtml)  
+* [《仅因过量下载论文，他被政府指控13项重罪》---SME](https://baike.baidu.com/tashuo/browse/content?id=afa769b9742ec541c9cfd7bc&lemmaId=&fromLemmaModule=pcBottom)  
+* [《斯沃茨和自由美国的边界》---东方早报](http://finance.ifeng.com/money/roll/20130117/7567842.shtml)  
 * [百度百科词条SOPA](https://baike.baidu.com/item/SOPA/8472514)
 
