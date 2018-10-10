@@ -37,5 +37,7 @@ File-New-New empty project
 ## 让游戏动起来
 首先，点击上方 Event sheet 以编辑活动事件,我们首先想到让玩家总是看着鼠标。双击空白部分，在界面中System - everytick - add action - player - Set angle towards position然后在 X 中填入 Mouse.X ,在 Y 中填入 Mouse.Y。同样地，我们依据自己的构思，使玩家开枪，使怪物碰壁后朝向玩家返回等等。然后我们在变量中赋予子弹伤害，玩家生命等等。一个简单的游戏就做好了。
 
+* ####  参考资料[Beginner's guide to Construct 2](https://www.scirra.com/tutorials/37/beginners-guide-to-construct-2)
+
 
 
