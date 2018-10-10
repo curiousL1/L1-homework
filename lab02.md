@@ -1,6 +1,7 @@
 # 制作html5射击游戏 
-* 成果展示  
-![](https://github.com/curiousL1/L1-homework/blob/gh-pages/game1.gif?raw=true)  
+* 成果展示 
+
+![](images/lyt.gif)  
 
 ## 准备
 1. Construct2(Free)  
