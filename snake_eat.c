@@ -9,7 +9,7 @@
 #define SNAKE_FOOD '$'
 #define WALL_CELL '*'
 
-//map[×İ×ø±ê][ºá×ø±ê] 
+//map[çºµåæ ‡][æ¨ªåæ ‡] 
 char map[12][12] =
 	{"************",
 	"*XXXXH     *",
@@ -24,23 +24,23 @@ char map[12][12] =
 	"*          *",
 	"************"};
 	
-void snakeMove(int,int);//ÏÈÒÆ¶¯Éß 
-int judgeOver(int,int);//ÅĞ¶¨ÓÎÏ·ÊÇ·ñ½áÊø 
-void output(void);//ÓÎÏ·¼ÌĞøÔòÊä³ö½çÃæ 
+void snakeMove(int,int);//å…ˆç§»åŠ¨è›‡ 
+int judgeOver(int,int);//åˆ¤å®šæ¸¸æˆæ˜¯å¦ç»“æŸ 
+void output(void);//æ¸¸æˆç»§ç»­åˆ™è¾“å‡ºç•Œé¢ 
 void putFood(void); 
 
 int snakeX[SNAKE_MAX_LENGTH] = {1,2,3,4,5};
-int snakeY[SNAKE_MAX_LENGTH] = {1,1,1,1,1};//ÉßµÄ³õÊ¼×ø±ê	
-int snakeLength = 5;//³õÊ¼³¤¶È 
-int foodX,foodY;//Ê³Îï×ø±ê 
+int snakeY[SNAKE_MAX_LENGTH] = {1,1,1,1,1};//è›‡çš„åˆå§‹åæ ‡	
+int snakeLength = 5;//åˆå§‹é•¿åº¦ 
+int foodX,foodY;//é£Ÿç‰©åæ ‡ 
 
 int main(){
 	char move,c; 
-	int flag = 1;//ÓÎÏ·½áÊøÔò±äflagÎª0 
+	int flag = 1;//æ¸¸æˆç»“æŸåˆ™å˜flagä¸º0 
 	putFood();
 	while(flag){		
 		output();		
-		move = getch();				
+		move = getchar();				
 		switch(move){
 			case 'a': 
 				snakeMove (-1, 0);
@@ -55,7 +55,7 @@ int main(){
 				snakeMove (0, -1);
 				break;
 			}
-//ÉßÍ·ÓëÊ³ÎïÏà×²ºóÉß¼Ó³¤£¬ÖØĞÂ·ÅÖÃÊ³Îï 			
+//è›‡å¤´ä¸é£Ÿç‰©ç›¸æ’åè›‡åŠ é•¿ï¼Œé‡æ–°æ”¾ç½®é£Ÿç‰© 			
 		if(snakeX[snakeLength - 1] == foodX&&snakeY[snakeLength - 1] == foodY){
 			snakeY[snakeLength] = snakeY[snakeLength-1];
 			snakeX[snakeLength] = snakeX[snakeLength-1];
@@ -76,7 +76,7 @@ int main(){
 
 void snakeMove (int x,int y){
 	int i;
-//Ê×ÏÈÅĞ¶ÏÒÆ¶¯ÊÇ·ñºÏÀí
+//é¦–å…ˆåˆ¤æ–­ç§»åŠ¨æ˜¯å¦åˆç†
 	if(snakeX[snakeLength - 1] + x != snakeX[snakeLength - 2]||snakeY[snakeLength - 1] + y != snakeY[snakeLength - 2]){
 		for(i = 0;i < snakeLength - 1;i++){
 			map[snakeY[i]][snakeX[i]] = SNAKE_CELL;
@@ -92,7 +92,7 @@ void snakeMove (int x,int y){
 		}
 	
 	} 
-}//Ã¿Ò»´ÎÒÆ¶¯Ö®Ç°¶¼Ó¦°ÑÖ®Ç°µÄÇå¿Õ£¬·ñÔòÉßµÄ³¤¶È½«²»¶ÏÔö¼Ó 
+}//æ¯ä¸€æ¬¡ç§»åŠ¨ä¹‹å‰éƒ½åº”æŠŠä¹‹å‰çš„æ¸…ç©ºï¼Œå¦åˆ™è›‡çš„é•¿åº¦å°†ä¸æ–­å¢åŠ  
 void output(void) {
     int i, j;
     for (i = 0; i < 12; i++) {
@@ -103,7 +103,7 @@ void output(void) {
 }
 
 int judgeOver(int x,int y){
-	if(x > 0&&x < 11&&y > 0&&y < 11)//ÅĞ¶ÏÉßÍ·Î»ÖÃ¼´¿É 
+	if(x > 0&&x < 11&&y > 0&&y < 11)//åˆ¤æ–­è›‡å¤´ä½ç½®å³å¯ 
 		return 1;
 	else 
 		return 0;
@@ -113,7 +113,7 @@ void putFood(void){
 	srand(time(NULL));
 
     foodX = rand()%12;
-    foodY = rand()%12;//Ëæ»ú²úÉú×ø±ê 
+    foodY = rand()%12;//éšæœºäº§ç”Ÿåæ ‡ 
     if(map[foodY][foodX] == ' ')
     	map[foodY][foodX] = SNAKE_FOOD;
 }
