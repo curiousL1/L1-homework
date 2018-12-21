@@ -130,7 +130,9 @@ int main(){
 ```
 为了更好的体验，我们使用getch()（而不是getchar）函数来避免输入一个字符按一下回车的情况，使用system("cls")清屏函数来清除掉上一次操作后的图像  
 完成了以上内容，我们就可以通过自己操作来快乐玩耍了。  
-***********
+
+-----------
+
 ### 2. 有了以上铺垫，我们进入正题——智能蛇的实现：  
 首先，我们得学会利用linux执行之前在windows写好的程序  
 1. 我们用printf("\033[2J")代替清屏函数system("cls")
@@ -156,7 +158,8 @@ int main(){
 	}
 ```
 利用函数实现这些任务
-```
+
+```  
 char nextStep(char Hx,char Hy,int Fx,int Fy){
 	int distance[3],i,counter = 0,mark;
 	char direction[4] = {"asdw"},moveable[3];
@@ -254,7 +257,8 @@ int findNearest(int d[],int n){
 			return i;
 	}		
 }
-```  
+``` 
+ 
 然后，我们只需要使move = nextStep（将函数返回值代替人工输入值），即可实现“智能蛇”。
 
 ### 3. 游戏创新（障碍物设置）的实现  
